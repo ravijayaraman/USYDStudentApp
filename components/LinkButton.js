@@ -1,3 +1,4 @@
+//This file contain piecce of code for all the link button used within the application
 import React from "react";
 import {
     Text,
@@ -11,6 +12,7 @@ import {
 
 const win = Dimensions.get('window');
 
+//Defining for component which will be reused for the landing page to dis[lay the initial link
 export default function LinkButton({ title, navigation, object }) {
     let header = object;
     return (

@@ -12,13 +12,14 @@ const win = Dimensions.get('window');
 const content = JSON.parse(JSON.stringify(contents));
 const Stack = createStackNavigator();
 
+//Function used to parse the json data after fetching from the local directory
 function parseJSONObject(data) {
     let keys = [];
     for(let k in data) keys.push({"id": k});
-    console.log(keys);
     return keys;
 }
 
+//initial rendering done with flatlist to display all the links and buttons
 function LandingScreen({ navigation }) {
     return (
         <View style={styles.container}>
@@ -35,22 +36,18 @@ function LandingScreen({ navigation }) {
 }
 
 function DetailsScreen({ route, navigation }) {
-    const { data } = route.params;
-    let objDetail = data.introParagraph;
+    let { data } = route.params;
+    let objDetail = JSON.parse(JSON.stringify(data["introParagraph"]));
+    let objQuestion = JSON.parse(JSON.stringify(data["FAQItems"]));
     navigation.setOptions({ title: data.sectionTitle });
     return (
         <View>
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <FAQDetail title={objDetail["text"]} object={data}/>
-                <View>
-                    <Text style={styles.textUnderline}>FAQ</Text>
-                </View>
-                <FAQDetail title={objDetail["text"]} object={data}/>
-            </ScrollView>
+            <FAQDetail title={objDetail.text} object={objDetail} question={objQuestion}/>
         </View>
     );
 }
 
+//main application start with all the initial navigation stack
 function App() {
     return (
         <NavigationContainer>
@@ -90,9 +87,5 @@ const styles = StyleSheet.create({
     },
     bottom: {
         marginBottom: 20
-    },
-    textUnderline: {
-        textDecorationLine: 'underline',
-        justifyContent: 'center'
     }
 });

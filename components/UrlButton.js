@@ -13,9 +13,10 @@ import {
 const win = Dimensions.get('window');
 
 export default function UrlButton({ title, url }) {
+    let strURL = String(url);
     return (
         <TouchableHighlight>
-            <TouchableOpacity style={styles.container} onPress={() => { Linking.openURL('http://google.com')}}>
+            <TouchableOpacity style={styles.container} onPress={() => { Linking.openURL(strURL)}}>
                 <View style={[styles.container, styles.justifyLeft]}>
                     <Image source={require('../assets/metro-link.png')} resizeMode={'contain'} style={styles.image} />
                     <Text>{title}</Text>

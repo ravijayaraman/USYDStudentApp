@@ -1,36 +1,60 @@
+//This javascript file contain all the code for the FAQDetails componenet that is used with in the application
+
+//Importing the mandatory libraries
 import React from "react";
 import {
     Text,
     View,
     StyleSheet,
-    TouchableHighlight,
-    Image,
-    TouchableOpacity,
     Dimensions,
-    FlatList
+    FlatList,
+    ScrollView
 } from "react-native";
-import LinkButton from "./LinkButton";
+
+//import the URL buttom componenet which will be reused with the Flatlist to shown all the links for the FAQs
 import UrlButton from "./UrlButton";
 
+//Constant to get the dimension of the screen the user is currently viewing
 const win = Dimensions.get('window');
 
-export default function FAQDetail({ title, subtitle, object }) {
-    let header = JSON.parse(object);
-    let strSubTitle = subtitle;
-    let data = JSON.parse(header["introParagraph"]);
+//Function definition for the FAQDetails containing piece of code for rendering the view when called
+export default function FAQDetail({ title, object, question }) {
+
+    //Set the local variables after passing from the function to display on the screen here
+    let strTitle = title;
+    let header = JSON.parse(JSON.stringify(object));
+    let objQuestion = JSON.parse(JSON.stringify(question));
+    let arrLinks = JSON.parse(JSON.stringify(header.links));
+
     return (
-        <View style={styles.container}>
-            <Text>{title}</Text>
-            <Text>{strSubTitle}</Text>
-            <FlatList
-                data={JSON.parse(data["links"])}
-                renderItem={({ item }) => {
-                    return (
-                        <UrlButton title={item.title} url={item.uri} />
-                    );
-                }}
-            />
-        </View>
+        //Return scrollview for the content to display all the details in the page
+        <ScrollView>
+            <View style={styles.container}>
+                <Text style={styles.fontQuestion}>{strTitle}</Text>
+                <FlatList
+                    data={arrLinks}
+                    renderItem={({ item }) => {
+                        return (
+                            <UrlButton title={item.title} url={JSON.stringify(item.uri)} />
+                        );
+                    }}
+                />
+                <View>
+                    <Text style={styles.textUnderline}>FAQ</Text>
+                </View>
+                <FlatList
+                    data={objQuestion}
+                    renderItem={({ item }) => {
+                        return (
+                            <View>
+                                <Text>{item.question}</Text>
+                                <Text>{item.answer}</Text>
+                            </View>
+                        );
+                    }}
+                />
+            </View>
+        </ScrollView>
     );
 }
 
@@ -39,9 +63,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         alignItems: 'center',
         width: win.width,
-        flexDirection: 'row',
-        height: 40,
-        margin: 5,
+        flexDirection: 'column',
+        padding: 20,
         // justifyContent: 'flex-end'
     },
     justifyLeft: {
@@ -55,22 +78,12 @@ const styles = StyleSheet.create({
         width: 20,
         height: 20,
         margin: 20
+    },
+    textUnderline: {
+        textDecorationLine: 'underline',
+        justifyContent: 'center'
+    },
+    fontQuestion: {
+        fontWeight: 'bold'
     }
 });
-
-
-
-function LandingScreen({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <FlatList
-                data={parseJSONObject(content)}
-                renderItem={({ item }) => {
-                    return (
-                        <LinkButton title={item.id} navigation={navigation} object={content[item.id]}/>
-                    );
-                }}
-            />
-        </View>
-    );
-}
