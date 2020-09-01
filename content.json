@@ -1,0 +1,158 @@
+{
+  "Before You Leave": {
+    "sectionTitle": "Before You Leave",
+    "introParagraph": {
+        "text": "Before you leave for the University, make sure you have these essential tasks done!",
+        "links": [
+          {
+            "title": "Visas",
+            "uri":
+              "https://www.sydney.edu.au/study/how-to-apply/international-students/visas.html"
+          },
+          {
+            "title": "Health Insurance",
+            "uri":
+              "https://www.sydney.edu.au/study/finances-fees-costs/living-costs/health-insurance.html"
+          },
+          {
+            "title": "Accommodation",
+            "uri": "https://www.sydney.edu.au/study/accommodation.html"
+          }
+        ]
+      },
+    "FAQItems": [
+        {
+          "question": "Which visa do I apply for?",
+          "answer": "As an international student, you need to hold a valid Australian visa for the duration of your study in Sydney. There are several different types of visa that might be suitable. Refer to the Australian Government Department of Home Affairs for titlermation.\\n\\nIf you are applying for a student visa, you can apply as soon as you receive your electronic confirmation of enrolment (eCoE) from the University.\\n\\nIf you are already in Australia and need to extend your visa, you can apply for an extension eCoE through Sydney Student.",
+          "additionalInfo": [
+            {
+              "title": "Visas",
+              "url":
+                    "https://www.sydney.edu.au/study/admissions/apply/visas.html"
+            },
+            {
+              "title": "Student visa requirements",
+              "url": "https://www.sydney.edu.au/students/student-visas.html"
+            }
+          ]
+        },
+        {
+          "question": "I need short-term accommodation before my course starts.",
+          "answer": "If you require short term accommodation before your course starts, Accommodation Services has compiled a list to help with that.",
+          "additionalInfo": [
+            {
+              "title": "Short term accommodation",
+              "link": "https://www.sydney.edu.au/campus-life/accommodation/live-off-campus/emergency-and-short-term-housing.html"
+            }
+          ]
+        }
+      ]
+  },
+  "When You Arrive": {
+    "sectionTitle": "When You Arrive",
+    "introParagraph": {
+      "text": "When you arrive in Sydney, there are certain things you must do to properly prepare and set up for your time here.",
+      "links": [
+        {
+          "title": "Our campuses",
+          "url": "https://www.sydney.edu.au/about-us/campuses.html"
+        },
+        {
+          "title": "International Student support",
+          "url":
+            "https://www.sydney.edu.au/students/support-for-international-students.html"
+        }
+      ]
+    },
+    "FAQItems": [
+      {
+        "question": "I want to get involved in student life.",
+        "answer": "The university has wide and varied experiences for students. Student life is largely dominated by activities hosted by student organisations and clubs and societies. We encourage you to get involved and get the most out of your University experience. ",
+        "additionalInfo": [
+          {
+            "title": "Clubs and societies",
+            "url":
+              "https://www.sydney.edu.au/students/clubs-and-societies.html"
+          },
+          {
+            "title": "Student organisations",
+            "url":
+              "https://www.sydney.edu.au/students/student-representation.html"
+          }
+        ]
+      },
+      {
+        "question":
+          "Where can I get help for international student- specific concerns ?",
+        "answer": "For general concerns about your enrolment and life at the University, the Student Centre is the best place to direct your enquiry. If you have more international student-specific concerns, our team of compliance officers is here to help you with basic issues related to student visas and your studies in general.",
+        "additionalInfo": [
+          {
+            "title": "Student Centre",
+            "url": "https://www.sydney.edu.au/students/student-contacts-enquiries.html"
+          },
+          {
+            "title": "Make an enquiry",
+            "url": "https://www.sydney.edu.au/students/forms/make-an-enquiry.html"
+          },
+          {
+            "title": "International Student support",
+            "url":
+              "https://www.sydney.edu.au/students/support-for-international-students.html"
+          }
+        ]
+      }
+    ]
+  },
+  "Living in Australia": {
+    "sectionTitle": "Living in Australia",
+    "introParagraph": {
+      "text": "This is a list of resources for you while you are studying and living in Australia.",
+      "links": [
+        {
+          "title": "Accommodation",
+          "url": "https://www.sydney.edu.au/campus-life/accommodation.html"
+        },
+        {
+          "title": "Health & Wellbeing",
+          "url": "https://www.sydney.edu.au/students/health-wellbeing.html"
+        },
+        {
+          "title": "Working in Australia",
+          "url":
+            "https://www.sydney.edu.au/students/working-on-a-student-visa.html"
+        },
+        {
+          "title": "Improving your English skills",
+          "url":
+            "https://www.sydney.edu.au/study/how-to-apply/admission-pathways/centre-for-english-teaching.html"
+        }
+      ]
+    },
+    "FAQItems": [
+      {
+        "question": "How do I get around Sydney?",
+        "answer": "The easiest and most common means of transport around Sydney is the public transport system. You will need an Opal card to access the system (which includes buses, trains, light rails, and ferries around the Greater Sydney area).",
+        "additionalInfo": [
+          {
+            "title": "Transport for NSW",
+            "url": "https://transportnsw.title/"
+          }
+        ]
+      },
+      {
+        "question": "What are some resources for my health and wellbeing?",
+        "answer": "Here you can find a range of titlermation and resources to help you keep yourself healthy while at university. From common mental health issues and support contacts, to mindfulness and general health tips, these pages are designed to help you support yourself and others.",
+        "additionalInfo": [
+          {
+            "title": "Student Health & Wellbeing",
+            "url": "https://www.sydney.edu.au/students/health-wellbeing.html"
+          },
+          {
+            "title": "Book a GP",
+            "url": "https://www.sydney.edu.au/students/health-services/making-an-appointment.html"
+          }
+        ]
+      }
+    ]
+  }
+}
